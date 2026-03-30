@@ -12,11 +12,3 @@ add_library(pendarlab_comm_byte_transport SHARED
 target_include_directories(pendarlab_comm_byte_transport PUBLIC 
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 )
-
-
-add_library(pendarlab_comm_serial_byte_transport SHARED
-  src/SerialByteTransport.cpp
-)
-target_include_directories(pendarlab_comm_serial_byte_transport PUBLIC 
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-)
