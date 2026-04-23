@@ -14,6 +14,8 @@ namespace pendarlab::lib::comm
     inline static std::unordered_map<std::string, Descriptor> registry;
   };
 
+  std::unique_ptr<ByteTransportFactory::ByteTransportFactoryImpl> ByteTransportFactory::p_impl_;
+
   ByteTransportFactory& ByteTransportFactory::instance()
   {
     static ByteTransportFactory factory;
