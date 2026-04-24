@@ -73,6 +73,14 @@ namespace pendarlab::lib::comm
     return list_of_registered;
   }
 
+  bool ByteTransportFactory::isRegistered(const std::string& type){
+    auto it = p_impl_->registry.find(type);
+    if(it == p_impl_->registry.end()){
+      return false;
+    }
+    return true;
+  }
+
   ByteTransportFactory::ByteTransportFactory()
   {
   }

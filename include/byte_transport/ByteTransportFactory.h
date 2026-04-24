@@ -25,6 +25,7 @@ namespace pendarlab::lib::comm
     static ValidationResult validateConfig(const std::string& type, const std::unordered_map<std::string, std::string>& config);
     static void registerByteTransport(const std::string& type, CreatorFn creator_fn, ValidatorFn validator_fn);
     static std::vector<std::string> showRegistered();
+    static bool isRegistered(const std::string& type);
 
   private:
     struct ByteTransportFactoryImpl;
